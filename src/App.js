@@ -96,9 +96,12 @@ function App() {
               </p>}
          </StoreContext.Consumer>
         <CssBaseline/>
+        
         <Layout changeTheme={toggleTheme} theme={themeMode}>
           <Routes>
               <Route path="/" element={<Home/>} />
+              <Route path="/about_me" element={<h1>Hi I'm JOY</h1>} />
+
           </Routes>
         </Layout>
       </ThemeProvider>

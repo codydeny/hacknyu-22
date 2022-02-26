@@ -183,6 +183,7 @@ export default function Layout(props) {
       <Box component="main" sx={{ flexGrow: 1, paddingY : 3 }} className="flex flex-row justify-center mt-14">
         <DrawerHeader />
         {props.children}
+
       </Box>
     </Box>
   );
