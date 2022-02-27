@@ -16,15 +16,17 @@ let incomeFact=''
 let nonIncomeFact=''
 let houseFact=''
 let nonHouseFact=''
-
 class Person {
     constructor(props)
     {
         console.log(props)
-        const {age,employed,loan,financialInstruments,family,insurance,car,income,house} = props
+        const {age,employed,mutualFunds,loan,family,insurance,car,income,house} = props
+        // const {age,employed,loan,financialInstruments,family,insurance,car,income,house} = props
+
     }
+    
     isMajor() {
-        if(this.age>=18)
+        if(parseInt(this.age) >=18)
         {
             return true
         }
@@ -46,14 +48,14 @@ class Person {
     }
     isEmployed()
     {
-        if(this.employed === true) {
+        if(this.employed === 'on') {
             return true
         }
         return false
     }
     processEmployed()
     {
-        if(isEmployed()) {
+        if(this.isEmployed()) {
             return {
                 'description' : employedFact,
                 type : 'Employed'
@@ -68,7 +70,7 @@ class Person {
     }
     processLoan()
     {
-        if(this.loan === true) {
+        if(this.loan === 'on') {
             return {
                 'description' : loanFact,
                 type : 'Loan'
@@ -84,7 +86,8 @@ class Person {
     
     processFinancialInstruments()
     {
-        if(this.employed === true) {
+        if(this.mutualFunds == 'on') {
+            console.log('Debugging If statements work properly')
             return {
                 'description' : financialInstruments,
                 type : 'Finanical'
@@ -99,7 +102,7 @@ class Person {
     }
     processFamily()
     {
-        if(this.family === true) {
+        if(this.family === 'on') {
             return {
                 'description' : familyFact,
                 type : 'Family'
@@ -114,7 +117,7 @@ class Person {
     }
     processInsurance()
     {
-        if(this.insurance === true) {
+        if(this.insurance === 'on') {
             return {
                 'description' : insuranceFact,
                 type : 'Family'
@@ -129,7 +132,7 @@ class Person {
     }
     processCar()
     {
-        if(this.car === true) {
+        if(this.car === 'on') {
             return {
                 'description' : carFact,
                 type : 'Car'
@@ -144,7 +147,7 @@ class Person {
     }
     processIncome()
     {
-        if(this.income === true) {
+        if(this.income === 'on') {
             return {
                 'description' : incomeFact,
                 type : 'Income'
@@ -159,7 +162,7 @@ class Person {
     }
     processHouse()
     {
-        if(this.house === true) {
+        if(this.house === 'on') {
             return {
                 'description' : houseFact,
                 type : 'House'
