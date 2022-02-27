@@ -137,7 +137,7 @@ export default function Layout(props) {
   }
 
   return (
-    <Box sx={{ display: 'flex' }} className="bg-blue-500">
+    <div  className="">
       <CssBaseline />
       <AppBar position="fixed" open={open} color="inherit" className="dark:bg-black">
         <Toolbar>
@@ -178,12 +178,12 @@ export default function Layout(props) {
               </IconButton>
         </Toolbar>
       </AppBar>
-      {props.children}
-
+      
+      
       <Box component="main" sx={{ flexGrow: 1, paddingY : 3 }} className="flex flex-row justify-center mt-14">
         <DrawerHeader />
-        
+        {props.children}
       </Box>
-    </Box>
+    </div>
   );
 }
