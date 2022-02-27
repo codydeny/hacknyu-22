@@ -22,6 +22,7 @@ class StoreProvider extends React.Component {
         marketData : {},
         pairsToTrack : [],
         loading : false,
+        formInputs : {}
 
     }
 }
@@ -31,6 +32,12 @@ class StoreProvider extends React.Component {
       <StoreContext.Provider value = {{ 
         state: this.state,
 
+
+        formSubmit : (e) => {
+          e.preventDefault();
+          let formInputToJSON = Object.fromEntries(new FormData(e.target));
+          this.setState({formInputs : formInputToJSON })
+        },
         // Actions
         // State Mutations
         changeState :(data)=> {
