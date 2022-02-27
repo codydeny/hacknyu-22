@@ -14,7 +14,7 @@ export default function Home() {
     const [step, setStep] = React.useState(1);
 
     return (
-        <div className="max-w-xl">
+        <div className="">
             <Onboarding/>
         </div>
     )
